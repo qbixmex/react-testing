@@ -4,6 +4,15 @@ import { Skills } from "../../../components";
 const skills = ['html', 'css', 'sass', 'javascript', 'typescript'];
 
 describe('Tests on <Skills />', () => {
+
+  test('Should contain a main heading', () => {
+    const { container } = render(<Skills skills={skills} />);
+    const heading = container.querySelector('#heading');
+    const heading2 = container.querySelector(`[id="heading"]`);
+    expect(heading).toHaveTextContent('Skills');
+    expect(heading2).toHaveTextContent('Skills');
+  });
+
   test('Should render correctly', () => {
     render(<Skills skills={skills} />);
     const list = screen.getByRole('list');
@@ -35,4 +44,5 @@ describe('Tests on <Skills />', () => {
     expect(button).not.toBeInTheDocument();
     expect(text).toBeInTheDocument();
   });
+
 });

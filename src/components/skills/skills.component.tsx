@@ -13,6 +13,8 @@ const Skills = ({ skills }: SkillsProps) => {
   
   return (
     <>
+      <h1 id="heading">Skills</h1>
+
       <ul>
         {skills.map(skill => <li key={skill}>{skill}</li>)}
       </ul>
