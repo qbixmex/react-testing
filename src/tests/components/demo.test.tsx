@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Demo from '../../components/demo';
+import { Demo } from '../../components/';
 
 describe("Tests on <Demo />", () => {
   test("Should have a heading text", () => {
