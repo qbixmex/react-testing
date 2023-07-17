@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from '../App';
+import Demo from '../../components/demo';
 
-describe("Tests on <App />", () => {
+describe("Tests on <Demo />", () => {
   test("Should have a heading text", () => {
     //* Arrange
-    render(<App />);
+    render(<Demo />);
     const h1 = screen.getByRole("heading", { level: 1 });
 
     //* Act
@@ -16,7 +16,7 @@ describe("Tests on <App />", () => {
 
   test("Should have a lorem ipsum text", () => {
     //* Arrange
-    render(<App />);
+    render(<Demo />);
     const text = screen.getByText(/Lorem Ipsum/i);
 
     //* Act
