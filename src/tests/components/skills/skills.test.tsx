@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, logRoles } from "@testing-library/react";
 import { Skills } from "../../../components";
 
 const skills = ['html', 'css', 'sass', 'javascript', 'typescript'];
@@ -38,9 +38,15 @@ describe('Tests on <Skills />', () => {
   });
 
   test('Should render login successful text after 500 milliseconds', async () => {
-    render(<Skills skills={skills} />);
+    const { container } = render(<Skills skills={skills} />);
+    logRoles(container);
+    
     const button = screen.getByRole('button', { name: 'Login' });
+
+    //? screen.debug();
     const text = await screen.findByText(/^You're/, { exact: false }, { timeout: 2000 });
+    //? screen.debug();
+
     expect(button).not.toBeInTheDocument();
     expect(text).toBeInTheDocument();
   });
