@@ -15,13 +15,8 @@ describe("Tests on <Demo />", () => {
   });
 
   test("Should have a lorem ipsum text", () => {
-    //* Arrange
     render(<Demo />);
     const text = screen.getByText(/Lorem Ipsum/i);
-
-    //* Act
-
-    //* Expect
     expect(text).toHaveTextContent("Lorem Ipsum");
   });
 });
