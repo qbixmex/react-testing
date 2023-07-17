@@ -27,4 +27,12 @@ describe('Tests on <Skills />', () => {
     const text = screen.queryByText(/^You're/, { exact: false });
     expect(text).not.toBeInTheDocument();
   });
+
+  test('Should render login successful text after 500 milliseconds', async () => {
+    render(<Skills skills={skills} />);
+    const button = screen.getByRole('button', { name: 'Login' });
+    const text = await screen.findByText(/^You're/, { exact: false }, { timeout: 2000 });
+    expect(button).not.toBeInTheDocument();
+    expect(text).toBeInTheDocument();
+  });
 });
