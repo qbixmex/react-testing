@@ -135,9 +135,9 @@ describe('Test on <Counter />', () => {
   test('Should select options', async () => {
     user.setup();
     render(
-      <select multiple>
+      <select multiple defaultValue={['B']}>
         <option value="1">A</option>
-        <option value="2" selected>B</option>
+        <option value="2">B</option>
       </select>,
     );
 

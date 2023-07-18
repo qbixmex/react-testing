@@ -36,7 +36,7 @@ const Register = () => {
         <section>
           <label htmlFor="job_location">Job Location</label>
           <select id="job_location" name="job_location">
-            <option disabled>Select a country</option>
+            <option disabled value="">Select a country</option>
             <option value="US">United States</option>
             <option value="MX">Mexico</option>
             <option value="CA">Canada</option>

@@ -39,7 +39,7 @@ describe('Tests on <Skills />', () => {
 
   test('Should render login successful text after 500 milliseconds', async () => {
     const { container } = render(<Skills skills={skills} />);
-    logRoles(container);
+    //? logRoles(container);
     
     const button = screen.getByRole('button', { name: 'Login' });
 
