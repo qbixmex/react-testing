@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { Users } from "../users";
 
 const MuiMode = () => {
 
@@ -14,6 +15,7 @@ const MuiMode = () => {
       >
         {`${theme.palette.mode} mode`}
       </Typography>
+      <Users />
     </Box>
   );
 

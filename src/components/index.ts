@@ -6,3 +6,4 @@ export { Alert } from './alert';
 export { Counter } from './counter';
 export { MuiMode } from './mui';
 export { CounterTwo } from './counter2';
+export { Users } from './users';
