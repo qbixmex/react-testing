@@ -4,3 +4,4 @@ export { default as Register } from './register.component';
 export { Skills } from './skills';
 export { Alert } from './alert';
 export { Counter } from './counter';
+export { MuiMode } from './mui';

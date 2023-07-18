@@ -1,12 +1,14 @@
-import { Counter } from "./components";
+import { MuiMode } from './components';
+import { AppProviders } from './providers';
 
 const App = () => {
   return (
-    <>
-      <h1>ReactJs</h1>
-      <Counter initialValue={10} />
-    </>
-  )
+    <AppProviders>
+      <div className="App">
+        <MuiMode />
+      </div>
+    </AppProviders>
+  );
 };
 
 export default App;
