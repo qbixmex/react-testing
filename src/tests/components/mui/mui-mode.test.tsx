@@ -1,14 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test-utils';
 import { MuiMode } from '../../../components';
-import { AppProviders } from '../../../providers';
 
 describe('Test on <MuiMode /> component', () => {
 
   test('Should render text correctly', () => {
 
-    render(<MuiMode />, {
-      wrapper: AppProviders
-    });
+    render(<MuiMode />);
 
     const heading = screen.getByRole('heading', { level: 1 });
 
